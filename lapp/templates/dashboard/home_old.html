@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+     {% if request.user.is_authenticated  %}
+           <h1>Area Restrita </h1>
+           Bem Vindo  Pagina <br>
+           <a href="/logouts/">Sair</a>
+            <hr>
+
+           {% if perms.admin.can_edit_users %}
+                <p> Pode Editar </p>
+                <a href="/cadastrofuncionario/">Cadastro de Funcionario</a>
+
+           {% endif %}
+
+
+           {% if perms.admin.can_delete_posts %}
+                <a href="#">Eliminar Utilizador</a>
+           {% endif %}
+     {% else %}
+          Voce  nao esta autenticado, por favor volte e auntetique-se.
+     {% endif %}
+
+
+{% endblock %}

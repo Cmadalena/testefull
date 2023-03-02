@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+     <form name="form" id="form" method="post" action="{% if db %}/update/{{db.id}}/{% else %}/createfuncionario/{% endif %}">
+          {% csrf_token %}
+          <div class="col-6 mt-4 m-auto">
+               <a href="/dashboard/" class="forgot">Voltar</a>
+               <center>
+                         <h1>Cadastro de Funcionario</h1>
+               </center>
+               <input class="form-control mt-4" type="text" name="nome" id="nome" placeholder="Nome do Funcionario">
+               <input class="form-control mt-4" type="text" name="apelido" id="apelido" placeholder="Apelido">
+               <input class="form-control mt-4" type="text" name="sexo" id="sexo" placeholder="Genero">
+               <input class="form-control mt-4" type="text" name="tipodoc" id="tipodoc" placeholder="Tipo de Documento">
+               <input class="form-control mt-4" type="text" name="nrdoc" id="nrdoc" placeholder="Numero do documento">
+               <input class="form-control mt-4" type="date" name="dataadmissao" id="dataadmissao">
+               <input class="form-control mt-4" type="text" name="cargo" id="cargo" placeholder="Cargo do Funcionario">
+               <input class="form-control mt-4" type="text" name="formacaoacademica" id="formacaoacademica" placeholder="Formacao Academica">
+               <input class="form-control mt-4" type="text" name="nivelacademico" id="nivelacademico" placeholder="Nivel Academico">
+               <input class="form-control mt-4" type="number" name="nuit" id="nuit" placeholder="Numero Unico de Identificao">
+               <input class="form-control mt-4" type="text" name="estadocivil" id="estadocivil" placeholder="Estado Civil">
+               <input class="form-control mt-4" type="text" name="localnasc" id="localnasc" placeholder="Local de Nascimento">
+               <input class="form-control mt-4" type="number" name="telefone" id="telefone">
+               <input class="form-control mt-4" type="number" name="telefone1" id="telefone1">
+               <input class="form-control mt-4" type="email" name="email" id="email" placeholder="Email">
+               <input class="form-control mt-4" type="text" name="observacao" id="observacao" placeholder="Observacao">
+               <input class="btn btn-primary mt-4" type="submit" value="Cadastrar">
+          </div>
+     </form>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="form-bg">
+    <div class="container">
+        <div class="row">
+
+            <div class="center">
+                <div class="form-container">
+                    <div class="left-content">
+
+                        {% load static %}
+                        <img src="{% static 'img/Banner_login.jpg' %}" alt="My image" width="100%" height="100%">
+
+                    </div>
+                    <div class="right-content">
+                        <h3 class="form-title">Login</h3>
+
+                        <form class="form-horizontal" name="formPainel" id="formPainel" method="post"
+                              action="/dologin/">
+                            {% if msg %}
+                                <div class="alert {{class}}">
+                                     {{msg}}
+                                </div>
+                            {% endif %}
+
+                            {% csrf_token %}
+                            <div class="form-group">
+                            <label>Nome de Usuario</label>
+                                <input class="form-control" type="text" name="user" id="user">
+                            </div>
+                            <div class="form-group">
+                            <label>Senha</label>
+                                <input class="form-control" type="password" name="password" id="password">
+                            </div>
+                            <button class="btn signin">Entrar</button>
+
+                         <!--   <div class="remember-me">
+                                <input type="checkbox" class="checkbox">
+                                <span class="check-label">Remember Me</span>
+                            </div> -->
+
+                            <a href="" class="forgot">Esqueceu senha?</a>
+                        </form>
+
+
+                        <span class="signup-link">Nao tem conta? Solicite <a href="">Aqui!</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

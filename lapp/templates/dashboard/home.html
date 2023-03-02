@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PGR</title>
+    {% load static %}
+                <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{% static 'bootstrapmenu/css/bootstrap.min.css' %}">
+     <!-- databases css -->
+    <link rel="stylesheet" href="{% static 'datatables/css/jquery.dataTables.min.css' %}">
+     <!-- fontawesome css -->
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'cssmenu/customstylesheet.css' %}">
+
+    <script src="{% static 'bootstrapmenu/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrapmenu/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrapmenu/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/Banner_login.jpg' %}" width="80" height="80" />
+                <b> INTRAMP - PGR </b>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collage"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="">Menu Principal</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Sobre Nos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Termos</a>
+                    </li>
+
+                </ul>
+
+            </div>
+     <a href="/logouts/">Sair</a>
+
+   </nav>
+
+
+
+        <footer>
+            <div id="footer2" class="container-fluid">
+                 <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <p style="color:whitesmoke"> &copy Todos Direitos Reservados. <a class="footerlinks" href="#" target="_blank">DTIC's</a> &copy Desenvolvido Por.  <a class="footerlinks" href="#" target="_blank">PGR</a>  </p>
+                     </div>
+                 </div>
+            </div>
+
+        </footer>
+
+</body>
+</html>
